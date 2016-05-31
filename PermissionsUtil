@@ -88,15 +88,18 @@ public class PermissionsUtil {
     }
 
 
-    public void processPermissionsRequestResult(int requestCode, String[] permissions, int[] grantResults){
+
+    public Boolean processPermissionsRequestResult(int requestCode, String[] permissions, int[] grantResults){
 
         Boolean permissionsResult = verifyPermissionsResult(grantResults);
         if(permissionsResult){
             Log.d(TAG, "allPermissionsGranted? TRUE");
             Toast.makeText(activity, "Permission(s) granted. Please proceed.", Toast.LENGTH_SHORT).show();
+            return true;
         } else {
             Log.d(TAG, "allPermissionsGranted? FALSE");
             Toast.makeText(activity, "Please grant all permissions to proceed.", Toast.LENGTH_SHORT).show();
+            return false;
         }
 
     }
