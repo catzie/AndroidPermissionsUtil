@@ -4,6 +4,8 @@ Write less code for managing Android M permissions on your app
 # Usage
 Place PermissionsUtil.java in your project and update its package name accordingly. Instantiate object, set needed permissions, request code, and use the method allRequiredPermissionsGranted() to check if all required permissions have been granted.
 
+Change "MainActivity" into the name of activity you're using this for.
+
 ## Example:
 
 ```
