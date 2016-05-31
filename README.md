@@ -6,7 +6,9 @@ Place PermissionsUtil.java in your project and update its package name according
 
 Change "MainActivity" into the name of activity you're using this for.
 
-## Example:
+Your activity should implement ```ActivityCompat.OnRequestPermissionsResultCallback``` and override ```onRequestPermissionsResult()```
+
+## Example Usage:
 
 ```
 private final int REQ_CODE_PERMS_FEATURE01 = 1;
@@ -21,4 +23,16 @@ if(permUtil.allRequiredPermissionsGranted()){
 } else {
     permUtil.requestNeededPermissions();
 }
+```
+
+##Example onRequestPermissionsResult()
+```
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == REQ_CODE_PERMS_FEATURE01) {
+            p.processPermissionsRequestResult(requestCode, permissions, grantResults);
+        } else {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
 ```
