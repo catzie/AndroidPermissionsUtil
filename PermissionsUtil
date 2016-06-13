@@ -13,6 +13,7 @@ import java.util.List;
 
 /**
  * Created by Catzie on 31/05/2016.
+ * <a href="https://github.com/catzie/AndroidPermissionsUtil/">https://github.com/catzie/AndroidPermissionsUtil/</a>
  */
 
 public class PermissionsUtil {
