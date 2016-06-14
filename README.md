@@ -30,7 +30,7 @@ if(permUtil.allRequiredPermissionsGranted()){
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == REQ_CODE_PERMS_FEATURE01) {
-            p.processPermissionsRequestResult(requestCode, permissions, grantResults);
+            permUtil.processPermissionsRequestResult(requestCode, permissions, grantResults);
         } else {
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
