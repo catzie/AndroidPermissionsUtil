@@ -34,7 +34,7 @@ if(permUtil.allRequiredPermissionsGranted()){
             if(permissionRequestResult){
                 // proceed to do what needed permission(s)
             } else {
-                permUtil.requestNeededPermissions();
+                // oops, user denied permission request
             }
         } else {
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
